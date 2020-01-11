@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.innoq</groupId>
+    <artifactId>code-your-model-example</artifactId>
+    <version>0.1-SNAPSHOT</version>
+
+    <name>code-your-model-example</name>
+    <description>example project for the code-your-model library.</description>
+    <url>https://github.com/innoq/code-your-model-example</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>innoQ Deutschland GmbH</name>
+        <url>http://innoq.com/</url>
+    </organization>
+
+    <scm>
+        <connection>scm:git:git@github.com:innoq/code-your-model-example.git</connection>
+        <developerConnection>scm:git:git@github.com:innoq/code-your-model-example.git</developerConnection>
+        <url>git@github.com:innoq/code-your-model-example.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>tma</id>
+            <name>Torsten Mandry</name>
+            <email>torsten.mandry@innoq dot com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>1.8.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>addSources</goal>
+                            <goal>compile</goal>
+                            <goal>addTestSources</goal>
+                            <goal>compileTests</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.innoq</groupId>
+            <artifactId>code-your-model</artifactId>
+            <version>0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.neo4j.driver</groupId>
+            <artifactId>neo4j-java-driver</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
