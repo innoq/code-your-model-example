@@ -11,7 +11,7 @@ The model files are located under `src/model/groovy`
 
 To build this project run
 
-    gradlew build
+    ./gradlew build
     
 To start a local neo4j database run
 
@@ -20,7 +20,7 @@ To start a local neo4j database run
 The `ImportModel.groovy` script (located in `src/main/groovy/` in package `com.innoq.codeyourmodel.example`) imports all 
 model files into the neo4j database. It can be executed via gradle task 
 
-    gradlew importModel
+    ./gradlew importModel
         
 To view the model in neo4j open the [neo4j browser](http://localhost:7474) and execute the following cypher query
     
@@ -41,7 +41,7 @@ retrieve the required data and for example render it to the console.
 The `UseModel.groovy` script (located in `src/main/groovy/` in package `com.innoq.codeyourmodel.example`) gives a simple 
 example. It can be executed via gradle task
 
-    gradlew useModel
+    ./gradlew useModel
 
 To stop the local neo4j docker container lookup its container id and execute
 
