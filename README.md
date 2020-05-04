@@ -17,9 +17,10 @@ To start a local neo4j database run
 
     ./scripts/run-local-neo4j.sh
 
-The `./scripts/import-model.groovy` script imports all model files into the neo4j database. It can be executed via 
+The `ImportModel.groovy` script (located in `src/main/groovy/` in package `com.innoq.codeyourmodel.example`) imports all 
+model files into the neo4j database. It can be executed via gradle task 
 
-    ./scripts/import-model.sh
+    gradlew importModel
         
 To view the model in neo4j open the [neo4j browser](http://localhost:7474) and execute the following cypher query
     
@@ -37,10 +38,11 @@ or to select all `Service` nodes that emit or consume a particular `DomainEvent`
 
 Alternatively, you can write a groovy script that uses the `ModelRepository` to
 retrieve the required data and for example render it to the console. 
-The `./scripts/use-model.groovy` script gives a simple example. It can be executed via 
+The `UseModel.groovy` script (located in `src/main/groovy/` in package `com.innoq.codeyourmodel.example`) gives a simple 
+example. It can be executed via gradle task
 
-    ./scripts/use-model.sh
-  
+    gradlew useModel
+
 To stop the local neo4j docker container lookup its container id and execute
 
     docker stop <container id>

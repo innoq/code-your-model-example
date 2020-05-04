@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'groovy'
     id 'maven-publish'
 }
 
@@ -12,7 +13,7 @@ repositories {
 
 dependencies {
     implementation 'com.innoq:code-your-model:0.1'
-    implementation 'org.neo4j.driver:neo4j-java-driver:4.0.0'
+    implementation 'org.neo4j.driver:neo4j-java-driver:1.7.5'
 }
 
 group = 'com.innoq'
@@ -30,4 +31,14 @@ publishing {
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+}
+
+task importModel(type: JavaExec) {
+    main = 'com.innoq.codeyourmodel.example.ImportModel'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task useModel(type: JavaExec) {
+    main = 'com.innoq.codeyourmodel.example.UseModel'
+    classpath = sourceSets.main.runtimeClasspath
 }
