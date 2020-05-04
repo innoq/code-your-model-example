@@ -1,14 +1,10 @@
 plugins {
-    id 'java'
     id 'groovy'
-    id 'maven-publish'
 }
 
 repositories {
     mavenLocal()
-    maven {
-        url = 'http://repo.maven.apache.org/maven2'
-    }
+    mavenCentral()
 }
 
 dependencies {
@@ -20,14 +16,6 @@ group = 'com.innoq'
 version = '0.1-SNAPSHOT'
 description = 'example project for the code-your-model library.'
 sourceCompatibility = '1.8'
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
