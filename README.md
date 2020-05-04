@@ -9,6 +9,10 @@ The model files are located under `src/model/groovy`
 
 ## usage
 
+To build this project run
+
+    gradlew build
+    
 To start a local neo4j database run
 
     ./scripts/run-local-neo4j.sh
